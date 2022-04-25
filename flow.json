@@ -1,1 +1,421 @@
-[]
+[
+    {
+        "id": "834d9119488ffd2c",
+        "type": "tab",
+        "label": "Ejercicio 30",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1db6aa4ca7586921",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "enriquecrespo.com",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7e429a667b62f5c4",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "18a5eef0f4e20122",
+        "order": 1,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0afa8a4466224563",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "18a5eef0f4e20122",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6d72c6fb1a3de835",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "https://enriquecrespo.com:8086/",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "66f4800b97151cd4",
+        "type": "mqtt in",
+        "z": "834d9119488ffd2c",
+        "name": "",
+        "topic": "owntracks/aprendiendonodered/EnriqueBici/#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "1db6aa4ca7586921",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "ed21713f23436eb8"
+            ]
+        ]
+    },
+    {
+        "id": "299d905802247e8f",
+        "type": "debug",
+        "z": "834d9119488ffd2c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "0b4c674e55f7a33c",
+        "type": "ui_worldmap",
+        "z": "834d9119488ffd2c",
+        "group": "7e429a667b62f5c4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "0",
+        "usermenu": "hide",
+        "layers": "hide",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS,SW",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 620,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "ed21713f23436eb8",
+        "type": "json",
+        "z": "834d9119488ffd2c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 160,
+        "wires": [
+            [
+                "84a718106261bc34"
+            ]
+        ]
+    },
+    {
+        "id": "84a718106261bc34",
+        "type": "change",
+        "z": "834d9119488ffd2c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.name",
+                "pt": "msg",
+                "to": "payload.tid",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 280,
+        "wires": [
+            [
+                "0d7224fb8fd402d9",
+                "c2e8c4b13b279b84",
+                "ea6e41e6c28162d2",
+                "0b4c674e55f7a33c",
+                "299d905802247e8f"
+            ]
+        ]
+    },
+    {
+        "id": "0d7224fb8fd402d9",
+        "type": "influxdb out",
+        "z": "834d9119488ffd2c",
+        "influxdb": "6d72c6fb1a3de835",
+        "name": "",
+        "measurement": "EnriqueBici",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "aprendiendoarduino",
+        "bucket": "owntracks",
+        "x": 550,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c2e8c4b13b279b84",
+        "type": "worldmap-tracks",
+        "z": "834d9119488ffd2c",
+        "name": "",
+        "depth": "400",
+        "layer": "combined",
+        "smooth": true,
+        "x": 410,
+        "y": 320,
+        "wires": [
+            [
+                "ea6e41e6c28162d2",
+                "0b4c674e55f7a33c",
+                "2e9f5b8017f5c7a0"
+            ]
+        ]
+    },
+    {
+        "id": "ea6e41e6c28162d2",
+        "type": "worldmap",
+        "z": "834d9119488ffd2c",
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "0",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS,SW",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 620,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2e9f5b8017f5c7a0",
+        "type": "debug",
+        "z": "834d9119488ffd2c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "de6b2722a1ea37ba",
+        "type": "inject",
+        "z": "834d9119488ffd2c",
+        "name": "Borrar Track",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"name\":\"EB_\",\"deleted\":true}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 320,
+        "wires": [
+            [
+                "c2e8c4b13b279b84"
+            ]
+        ]
+    },
+    {
+        "id": "80cc8adf56ae50aa",
+        "type": "mqtt in",
+        "z": "834d9119488ffd2c",
+        "name": "",
+        "topic": "owntracks/aprendiendonodered/EnriqueMovil/#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "1db6aa4ca7586921",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "ed21713f23436eb8"
+            ]
+        ]
+    }
+]
